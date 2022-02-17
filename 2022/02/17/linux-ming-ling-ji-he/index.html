@@ -7,12 +7,12 @@
   
   <title>Linux命令集合 | 元气阿超</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常用命令123456cd  &#x2F; .&#x2F;  ..&#x2F; 			进入 根目录 当前目录 上一层目录   cat 					查看文件vi vim                  编辑文件scp                     从其他服务器拷贝文件cp                      拷贝文件mkdir                   创建文件夹 日志相关12345tail -f xxx">
+  <meta name="description" content="常用命令cd  &#x2F; .&#x2F;  ..&#x2F; 			进入 根目录 当前目录 上一层目录    cat 					查看文件 vi vim                  编辑文件 scp                     从其他服务器拷贝文件 cp                      拷贝文件 mkdir                   创建文件夹 日志相关ta">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux命令集合">
-<meta property="og:url" content="https://capricomyang.github.io/2022/02/17/Linux%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/index.html">
+<meta property="og:url" content="https://capricomyang.github.io/2022/02/17/linux-ming-ling-ji-he/index.html">
 <meta property="og:site_name" content="元气阿超">
-<meta property="og:description" content="常用命令123456cd  &#x2F; .&#x2F;  ..&#x2F; 			进入 根目录 当前目录 上一层目录   cat 					查看文件vi vim                  编辑文件scp                     从其他服务器拷贝文件cp                      拷贝文件mkdir                   创建文件夹 日志相关12345tail -f xxx">
+<meta property="og:description" content="常用命令cd  &#x2F; .&#x2F;  ..&#x2F; 			进入 根目录 当前目录 上一层目录    cat 					查看文件 vi vim                  编辑文件 scp                     从其他服务器拷贝文件 cp                      拷贝文件 mkdir                   创建文件夹 日志相关ta">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-17T07:02:24.000Z">
 <meta property="article:modified_time" content="2022-02-17T07:04:14.135Z">
@@ -25,8 +25,6 @@
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -58,7 +56,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://capricomyang.github.io"></form>
@@ -69,7 +67,7 @@
       <div class="outer">
         <section id="main"><article id="post-Linux命令集合" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2022/02/17/Linux%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/" class="article-date">
+    <a href="/2022/02/17/linux-ming-ling-ji-he/" class="article-date">
   <time datetime="2022-02-17T07:02:24.000Z" itemprop="datePublished">2022-02-17</time>
 </a>
     
@@ -89,16 +87,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd  / ./  ../ 			进入 根目录 当前目录 上一层目录   </span><br><span class="line">cat 					查看文件</span><br><span class="line">vi vim                  编辑文件</span><br><span class="line">scp                     从其他服务器拷贝文件</span><br><span class="line">cp                      拷贝文件</span><br><span class="line">mkdir                   创建文件夹</span><br></pre></td></tr></table></figure>
-<h4 id="日志相关"><a href="#日志相关" class="headerlink" title="日志相关"></a>日志相关</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tail -f xxx.log 		查看日志 实时刷新显示尾部</span><br><span class="line">grep &#x27;2021-11-22 11:1[3-4]&#x27; xxx.log  查看 log日志文件 2021年11月22日 11点 13分钟开始到14分钟结束的所有日志 前缀日期格式取决于日志文件格式</span><br><span class="line">    </span><br><span class="line">cat 文件名 |head -n 截止第几行 | tail -n +从第几行开始</span><br><span class="line">如：cat xxx.log |head -n 20000 | tail -n +19990 查看第19990行到20000行之间的日志</span><br></pre></td></tr></table></figure>
-<h4 id="服务器相关"><a href="#服务器相关" class="headerlink" title="服务器相关"></a>服务器相关</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nohup                  需要执行的命令 &amp;  执行结果输出于nohup.out 避免会话结束终止进程</span><br><span class="line">  </span><br><span class="line">sudo lsof -i:8081 </span><br><span class="line">sudo kill -9 “PID”     查询端口号为8081的进程 并根据查询出的PID 结束进程</span><br></pre></td></tr></table></figure>
+        <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><pre class="line-numbers language-none"><code class="language-none">cd  &#x2F; .&#x2F;  ..&#x2F; 			进入 根目录 当前目录 上一层目录   
+cat 					查看文件
+vi vim                  编辑文件
+scp                     从其他服务器拷贝文件
+cp                      拷贝文件
+mkdir                   创建文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="日志相关"><a href="#日志相关" class="headerlink" title="日志相关"></a>日志相关</h4><pre class="line-numbers language-none"><code class="language-none">tail -f xxx.log 		查看日志 实时刷新显示尾部
+grep &#39;2021-11-22 11:1[3-4]&#39; xxx.log  查看 log日志文件 2021年11月22日 11点 13分钟开始到14分钟结束的所有日志 前缀日期格式取决于日志文件格式
+    
+cat 文件名 |head -n 截止第几行 | tail -n +从第几行开始
+如：cat xxx.log |head -n 20000 | tail -n +19990 查看第19990行到20000行之间的日志<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="服务器相关"><a href="#服务器相关" class="headerlink" title="服务器相关"></a>服务器相关</h4><pre class="line-numbers language-none"><code class="language-none">nohup                  需要执行的命令 &amp;  执行结果输出于nohup.out 避免会话结束终止进程
+  
+sudo lsof -i:8081 
+sudo kill -9 “PID”     查询端口号为8081的进程 并根据查询出的PID 结束进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">du -h ./ 				查看当前文件夹 及内部文件及文件夹大小</span><br><span class="line">df -h 					查看磁盘大小使用情况</span><br></pre></td></tr></table></figure>
+<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><pre class="line-numbers language-none"><code class="language-none">du -h .&#x2F; 				查看当前文件夹 及内部文件及文件夹大小
+df -h 					查看磁盘大小使用情况<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://capricomyang.github.io/2022/02/17/Linux%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/" data-id="ckzqo93yy00016cui0lqa7rtq" class="article-share-link">Share</a>
+      <a data-url="https://capricomyang.github.io/2022/02/17/linux-ming-ling-ji-he/" data-id="ckzqoop6a00002guid5xy4e3w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -129,7 +140,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">标签</h3>
     <div class="widget">
       <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
     </div>
@@ -139,7 +150,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
       <a href="/tags/linux/" style="font-size: 10px;">linux</a>
     </div>
@@ -148,7 +159,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li></ul>
     </div>
@@ -158,12 +169,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2022/02/17/Linux%E5%91%BD%E4%BB%A4%E9%9B%86%E5%90%88/">Linux命令集合</a>
+            <a href="/2022/02/17/linux-ming-ling-ji-he/">Linux命令集合</a>
           </li>
         
           <li>

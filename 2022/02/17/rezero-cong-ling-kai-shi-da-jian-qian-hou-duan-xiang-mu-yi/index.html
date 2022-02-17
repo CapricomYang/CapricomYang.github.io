@@ -7,12 +7,12 @@
   
   <title>ReZero从零开始搭建前后端项目（一） | 元气阿超</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="layout: rezerotitle: 从零开始搭建前后端项目（一）date: 2022-02-17 15:56:20tags:  搭建后端项目 工具 IntelliJ IDEA Community Edition 2020.3  springboot 基础项目     项目创建结束 打开初始化的pom 文件添加必要的springboot依赖  &lt;!--添加 spring boot 依赖">
+  <meta name="description" content="layout: rezerotitle: 从零开始搭建前后端项目（一）date: 2022-02-17 15:56:20tags:  搭建后端项目 工具 IntelliJ IDEA Community Edition 2020.3  springboot 基础项目     项目创建结束 打开初始化的pom 文件添加必要的springboot依赖  123456789101112131415161">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ReZero从零开始搭建前后端项目（一）">
 <meta property="og:url" content="https://capricomyang.github.io/2022/02/17/rezero-cong-ling-kai-shi-da-jian-qian-hou-duan-xiang-mu-yi/index.html">
 <meta property="og:site_name" content="元气阿超">
-<meta property="og:description" content="layout: rezerotitle: 从零开始搭建前后端项目（一）date: 2022-02-17 15:56:20tags:  搭建后端项目 工具 IntelliJ IDEA Community Edition 2020.3  springboot 基础项目     项目创建结束 打开初始化的pom 文件添加必要的springboot依赖  &lt;!--添加 spring boot 依赖">
+<meta property="og:description" content="layout: rezerotitle: 从零开始搭建前后端项目（一）date: 2022-02-17 15:56:20tags:  搭建后端项目 工具 IntelliJ IDEA Community Edition 2020.3  springboot 基础项目     项目创建结束 打开初始化的pom 文件添加必要的springboot依赖  123456789101112131415161">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/19390595-c07247cc833db86f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/19390595-eedc806d346b87cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -38,6 +38,8 @@
   
     <link rel="icon" href="/favicon.png">
   
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -111,25 +113,7 @@
 <blockquote>
 <p>项目创建结束 打开初始化的pom 文件添加必要的springboot依赖</p>
 </blockquote>
-<pre class="line-numbers language-none"><code class="language-none">&lt;!--添加 spring boot 依赖--&gt;
-    &lt;parent&gt;
-        &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;
-        &lt;artifactId&gt;spring-boot-starter-parent&lt;&#x2F;artifactId&gt;
-        &lt;version&gt;2.2.6.RELEASE&lt;&#x2F;version&gt;
-    &lt;&#x2F;parent&gt;
-    
-    &lt;dependencies&gt;
-        &lt;!--该依赖包含spring-boot-starter,还自动开启了web功能 --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-web&lt;&#x2F;artifactId&gt;
-        &lt;&#x2F;dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-test&lt;&#x2F;artifactId&gt;
-            &lt;scope&gt;test&lt;&#x2F;scope&gt;
-        &lt;&#x2F;dependency&gt;
-    &lt;&#x2F;dependencies&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--添加 spring boot 依赖--&gt;</span><br><span class="line">    &lt;parent&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;2.2.6.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/parent&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;!--该依赖包含spring-boot-starter,还自动开启了web功能 --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>添加项目启动类 此时添加完成便可启动项目（目录一般以与网站相反的顺序命名 如showcase.ankicoo.com 包名一般为 com.ankicoo.showcase） </p>
 </blockquote>
@@ -153,30 +137,7 @@
 <h4 id="添加数据库操作"><a href="#添加数据库操作" class="headerlink" title="添加数据库操作"></a>添加数据库操作</h4><blockquote>
 <p>添加用于访问数据库的依赖，此处使用mysql数据库 使用 tk.mybatis 用于访问数据获取数据 添加下列依赖 版本可按需更改</p>
 </blockquote>
-<pre class="line-numbers language-none"><code class="language-none">&lt;!--Mysql--&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;8.0.16&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;
-&lt;!--mybatis--&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.mybatis.spring.boot&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;1.3.2&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;
-
-        &lt;!--tk.mybatis mapper--&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;tk.mybatis&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mapper&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;4.0.4&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;tk.mybatis&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mapper-spring-boot-starter&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;2.0.4&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--Mysql--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;8.0.16&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">&lt;!--mybatis--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.3.2&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--tk.mybatis mapper--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mapper&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;4.0.4&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mapper-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.0.4&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>添加数据库配置 于application.yaml文件中</p>
@@ -200,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://capricomyang.github.io/2022/02/17/rezero-cong-ling-kai-shi-da-jian-qian-hou-duan-xiang-mu-yi/" data-id="ckzqp2jc800041kui4rcahr3o" class="article-share-link">Share</a>
+      <a data-url="https://capricomyang.github.io/2022/02/17/rezero-cong-ling-kai-shi-da-jian-qian-hou-duan-xiang-mu-yi/" data-id="ckzqp6b740001ncui16zd59mn" class="article-share-link">Share</a>
       
       
     </footer>

@@ -21,6 +21,8 @@
     <link rel="icon" href="/favicon.png">
   
   
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
   
 <link rel="stylesheet" href="/css/style.css">
 
@@ -95,25 +97,7 @@
 <blockquote>
 <p>项目创建结束 打开初始化的pom 文件添加必要的springboot依赖</p>
 </blockquote>
-<pre class="line-numbers language-none"><code class="language-none">&lt;!--添加 spring boot 依赖--&gt;
-    &lt;parent&gt;
-        &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;
-        &lt;artifactId&gt;spring-boot-starter-parent&lt;&#x2F;artifactId&gt;
-        &lt;version&gt;2.2.6.RELEASE&lt;&#x2F;version&gt;
-    &lt;&#x2F;parent&gt;
-    
-    &lt;dependencies&gt;
-        &lt;!--该依赖包含spring-boot-starter,还自动开启了web功能 --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-web&lt;&#x2F;artifactId&gt;
-        &lt;&#x2F;dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-test&lt;&#x2F;artifactId&gt;
-            &lt;scope&gt;test&lt;&#x2F;scope&gt;
-        &lt;&#x2F;dependency&gt;
-    &lt;&#x2F;dependencies&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--添加 spring boot 依赖--&gt;</span><br><span class="line">    &lt;parent&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;2.2.6.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;/parent&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;!--该依赖包含spring-boot-starter,还自动开启了web功能 --&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">            &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>添加项目启动类 此时添加完成便可启动项目（目录一般以与网站相反的顺序命名 如showcase.ankicoo.com 包名一般为 com.ankicoo.showcase） </p>
 </blockquote>
@@ -137,30 +121,7 @@
 <h4 id="添加数据库操作"><a href="#添加数据库操作" class="headerlink" title="添加数据库操作"></a>添加数据库操作</h4><blockquote>
 <p>添加用于访问数据库的依赖，此处使用mysql数据库 使用 tk.mybatis 用于访问数据获取数据 添加下列依赖 版本可按需更改</p>
 </blockquote>
-<pre class="line-numbers language-none"><code class="language-none">&lt;!--Mysql--&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;8.0.16&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;
-&lt;!--mybatis--&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.mybatis.spring.boot&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;1.3.2&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;
-
-        &lt;!--tk.mybatis mapper--&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;tk.mybatis&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mapper&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;4.0.4&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;tk.mybatis&lt;&#x2F;groupId&gt;
-            &lt;artifactId&gt;mapper-spring-boot-starter&lt;&#x2F;artifactId&gt;
-            &lt;version&gt;2.0.4&lt;&#x2F;version&gt;
-        &lt;&#x2F;dependency&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--Mysql--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;8.0.16&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">&lt;!--mybatis--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;1.3.2&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--tk.mybatis mapper--&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mapper&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;4.0.4&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;mapper-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.0.4&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>添加数据库配置 于application.yaml文件中</p>
@@ -184,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://capricomyang.github.io/2022/02/17/rezero-cong-ling-kai-shi-da-jian-qian-hou-duan-xiang-mu-yi/" data-id="ckzqp2jc800041kui4rcahr3o" class="article-share-link">Share</a>
+      <a data-url="https://capricomyang.github.io/2022/02/17/rezero-cong-ling-kai-shi-da-jian-qian-hou-duan-xiang-mu-yi/" data-id="ckzqp6b740001ncui16zd59mn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -216,29 +177,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><pre class="line-numbers language-none"><code class="language-none">cd  &#x2F; .&#x2F;  ..&#x2F; 			进入 根目录 当前目录 上一层目录   
-cat 					查看文件
-vi vim                  编辑文件
-scp                     从其他服务器拷贝文件
-cp                      拷贝文件
-mkdir                   创建文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="日志相关"><a href="#日志相关" class="headerlink" title="日志相关"></a>日志相关</h4><pre class="line-numbers language-none"><code class="language-none">tail -f xxx.log 		查看日志 实时刷新显示尾部
-grep &#39;2021-11-22 11:1[3-4]&#39; xxx.log  查看 log日志文件 2021年11月22日 11点 13分钟开始到14分钟结束的所有日志 前缀日期格式取决于日志文件格式
-    
-cat 文件名 |head -n 截止第几行 | tail -n +从第几行开始
-如：cat xxx.log |head -n 20000 | tail -n +19990 查看第19990行到20000行之间的日志<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="服务器相关"><a href="#服务器相关" class="headerlink" title="服务器相关"></a>服务器相关</h4><pre class="line-numbers language-none"><code class="language-none">nohup                  需要执行的命令 &amp;  执行结果输出于nohup.out 避免会话结束终止进程
-  
-sudo lsof -i:8081 
-sudo kill -9 “PID”     查询端口号为8081的进程 并根据查询出的PID 结束进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+        <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd  / ./  ../ 			进入 根目录 当前目录 上一层目录   </span><br><span class="line">cat 					查看文件</span><br><span class="line">vi vim                  编辑文件</span><br><span class="line">scp                     从其他服务器拷贝文件</span><br><span class="line">cp                      拷贝文件</span><br><span class="line">mkdir                   创建文件夹</span><br></pre></td></tr></table></figure>
+<h4 id="日志相关"><a href="#日志相关" class="headerlink" title="日志相关"></a>日志相关</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tail -f xxx.log 		查看日志 实时刷新显示尾部</span><br><span class="line">grep &#x27;2021-11-22 11:1[3-4]&#x27; xxx.log  查看 log日志文件 2021年11月22日 11点 13分钟开始到14分钟结束的所有日志 前缀日期格式取决于日志文件格式</span><br><span class="line">    </span><br><span class="line">cat 文件名 |head -n 截止第几行 | tail -n +从第几行开始</span><br><span class="line">如：cat xxx.log |head -n 20000 | tail -n +19990 查看第19990行到20000行之间的日志</span><br></pre></td></tr></table></figure>
+<h4 id="服务器相关"><a href="#服务器相关" class="headerlink" title="服务器相关"></a>服务器相关</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nohup                  需要执行的命令 &amp;  执行结果输出于nohup.out 避免会话结束终止进程</span><br><span class="line">  </span><br><span class="line">sudo lsof -i:8081 </span><br><span class="line">sudo kill -9 “PID”     查询端口号为8081的进程 并根据查询出的PID 结束进程</span><br></pre></td></tr></table></figure>
 
-<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><pre class="line-numbers language-none"><code class="language-none">du -h .&#x2F; 				查看当前文件夹 及内部文件及文件夹大小
-df -h 					查看磁盘大小使用情况<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">du -h ./ 				查看当前文件夹 及内部文件及文件夹大小</span><br><span class="line">df -h 					查看磁盘大小使用情况</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://capricomyang.github.io/2022/02/17/linux-ming-ling-ji-he/" data-id="ckzqp2jbv00001kuiegv27mtg" class="article-share-link">Share</a>
+      <a data-url="https://capricomyang.github.io/2022/02/17/linux-ming-ling-ji-he/" data-id="ckzqp6b6z0000ncui08rg84gx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
@@ -273,23 +221,23 @@ df -h 					查看磁盘大小使用情况<span aria-hidden="true" class="line-nu
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://capricomyang.github.io/2022/02/17/hello-world/" data-id="ckzqp2jc100011kui39g58okf" class="article-share-link">Share</a>
+      <a data-url="https://capricomyang.github.io/2022/02/17/hello-world/" data-id="ckzqp6b780003ncui3ig4h63t" class="article-share-link">Share</a>
       
       
     </footer>
